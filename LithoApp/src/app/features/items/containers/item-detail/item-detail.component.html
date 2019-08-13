@@ -1,0 +1,10 @@
+<ion-header>
+  <app-header [title]="(item$|async)?.name || 'Item'">
+    <ion-back-button slot="start"></ion-back-button>
+  </app-header>
+</ion-header>
+<ion-content>
+  <pre>
+    {{item$|async|json}}
+  </pre>
+</ion-content>

@@ -1,0 +1,17 @@
+<ion-header>
+  <app-header title="Items"></app-header>
+</ion-header>
+<ion-content>
+  <ion-searchbar
+    placeholder="nom, propriété, couleur, chakra, zodiac, symptômes ..."
+    showCancelButton="always"
+    (ionChange)="search($event)"></ion-searchbar>
+  <ion-list *ngIf="items$|async as items">
+    <ion-item tappable [routerLink]="'../items/' + item._id" *ngFor="let item of items">
+      <ion-avatar *ngIf="item?.img?.length > 0" slot="start">
+        <img [src]="item.img">
+      </ion-avatar>
+      <ion-label>{{item.name}}</ion-label>
+  </ion-item>
+  </ion-list>
+</ion-content>

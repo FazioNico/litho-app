@@ -1,0 +1,14 @@
+app-home {
+  background: url('https://litho.nicolasfazio.ch/www/assets/images/bg-lithoapp.jpg') center center no-repeat;
+  background-size: cover;
+
+  ion-content {
+    --background: none;
+  }
+  svg {
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      display: block;
+  }
+}
